@@ -1,0 +1,12 @@
+<h2>Peek Inside Eric</h2>
+<ul class="aboutme">
+  <li *ngFor="let about of aboutme"
+    [class.selected]="about === selectedAbout"
+    (click)="onSelect(about)">
+    <span class="badge">{{about.id}}</span> {{about.name}}
+  </li>
+</ul>
+
+<app-about-detail [about]="selectedAbout"></app-about-detail>
+}
+ 
